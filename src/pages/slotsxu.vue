@@ -1,18 +1,18 @@
-<template> 
+<template>
     <h3>slots插槽续集</h3>
     <slot name="header"></slot>
-    <a href="#">asddddddddddddddddddaaa</a>
+    <a href="#">asdddddddddddddddddaaa</a>
     <slot name="content"></slot>
 </template>
 
-<script> 
-export default { 
-    name: 'slotsxu',
-
-    data() { 
-        return { 
-
+<script>
+export default {
+    name:'slotsxu',
+    data() {
+        return {
+            // message:'slotsxu'
         }
     }
 }
+
 </script>

@@ -1,43 +1,43 @@
-<template> 
+<template>
     <div class="propsjiaoyanB">
         <h3>propsjiaoyanB</h3>
-        <p>{{ title }}</p>
-        <p>{{ age }}</p>
-        <p v-for="(value, index) in names" :key="index">{{ value }}</p>
-    </div>
+        <p>{{title }}</p>
+        <p>{{ age }}K</p>
+        <p v-for="(value,index) in names" :key="index">{{ value }}</p>
+    </div> 
 </template>
 
 <script>
-
-export default {
-    name: 'propsjiaoyanB',
-    
-    data() {
+export default{
+    name:"propsjiaoyanB",
+    data(){
         return {
-            name: "张三",
-        };
+            name:"张三",
+    };
+},
+props:{
+    title:{
+        type:[String,Number,Array,Object,Boolean],
+        required: true,
     },
-    props: {
-        title: {
-            type: [String, Number, Array, Object, Boolean],
-            required: true,
-        },
-        age: {
-            type: Number,
-            default: 185,
-        },
-        names: {
-            type: Array,
-            default() {
-                return ["++++++++++++++++++++"];
+    age:{
+        type: Number,
+        default:185,
+    },
+    names: {
+        type: Array,
+        default(){
+            return ["+++++++++++++++++++"];
+            return ["+++++++++++++++++++"];
             },
         },
-    },
-};
-</script>
+    }
+}
 
+
+</script>
 <style scoped>
-.propsjiaoyanB { 
-    color: red;
+.propsjiaoyanB {
+    color:red;
 }
 </style>

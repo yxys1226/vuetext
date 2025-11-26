@@ -1,7 +1,13 @@
 <template>
     <div class="keyguanlizhuangtai">
         <h3>key属性添加到v-for中</h3>
-        <div v-for="(name, index) in names" :key="index">{{ name }} -------- {{ index }}</div>
+       
+        <!-- 推荐我们在任何可行的时候写v-for的时候，要为其加一个key 属性，key绑定的值期望是一个基础的类型的值,
+         例如字符串或者number-->
+         <!--最好不要使用index作为key值，我们要确保每一条数据的唯一索引不会发生变化
+         因为这会基于数组的顺序来决定元素，如果数组的顺序发生变化，这些key值就变成了无效的，会导致渲染出错 -->
+       
+        <div v-for="(name, index) in names" :key="index">{{ name}}------ {{ index}}</div>
         <div v-for="value in results" :key="value.gkey">
             <p>{{ value.name }}</p>
             <img :src="value.img" :alt="value.title">
@@ -13,7 +19,7 @@
 export default {
     data() {
         return {
-            names: ['张三', '李四', '王五'],
+            names: ['张三', '李四', '王五'], // 修改为names
             results: [
                 {
                     "gkey": "102094960",
@@ -49,18 +55,18 @@ export default {
                     "img": "//p1.qhimg.com/t0147f6ec029fefe8d7.png"
                 }
             ],
-            myObject: {
+            myObjects: {
                 title: '游戏列表',
                 author: 'ADAD',
-                Date: '2021-09-01'
-            }   
+                Date: '2021-07-01',
+            }
         }
     },
 }
 </script>
 
 <style scoped>
-.keyguanlizhuangtai{
-    color: green;   
+.keyguanlizhuangtai {  
+    color: rgb(45, 147, 51);
 }
 </style>

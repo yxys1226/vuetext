@@ -10,17 +10,17 @@
 
 <script>
 import Header from '../pages/header.vue';
-import Main from '../pages/main.vue';
-import Aside from '../pages/aside.vue';
+import Main from'../pages/main.vue';
+import Aside from'../pages/aside.vue';
 
 export default {
-    name: 'zujianqiantao',
-    data() {
+    name:'zujianqiantao',
+    data(){
         return {
-            name: '张三'
+            name:'张三'
         }
     },
-    components: {
+    components:{
         Header,
         Main,
         Aside
@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .zujianqiantao {
-    color: red;
-    position: relative;
+color: red;
+position: relative;
 }
 </style>

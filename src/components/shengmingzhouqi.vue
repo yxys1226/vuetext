@@ -1,62 +1,63 @@
-<template> 
+<template>
     <div class="shengmingzhouqi">
         <hr>
         <h3>组件生命周期</h3>
         <p>{{ msg }}</p>
-        <button @click="updateMsg">更新数据</button>
+        <button @click="upadteMsg">更新数据</button>
         <hr>
     </div>
 </template>
 
 <script>
+// 生命周期函数
+// 创建期： beforeCreate created
+// 挂载期： beforeMount mounted
+// 更新期： beforeUpdate updated
+// 销毁期： beforeUnmount unmounted
+
 export default {
-    name: "shengmingzhouqi",
+    name:'shengmingzhouqi',
+
     data() {
         return {
-            msg: "更新之前"
+            msg:'更新之前'
         }
     },
     methods: {
-        updateMsg() {
-            this.msg = "更新之后"
+        upadteMsg() {
+            this.msg = '更新之后';
         }
     },
+
     beforeCreate() {
-        console.log("组件创建之前");
+        console.log('组件创建之前');
     },
-    created() {
-        console.log("组件创建之后");
+    created(){
+        console.log('组件创建之后');
     },
     beforeMount() {
-        console.log("组件渲染之前");
+        console.log('组件渲染之前');
     },
     mounted() {
-        console.log("组件渲染之后");
+        console.log('组件渲染之后');
     },
     beforeUpdate() {
-        console.log("组件更新之前");
+        console.log('组件更新之前');
     },
     updated() {
-        console.log("组件更新之后");
-    },
-    beforeDestroy() {
-        console.log("组件销毁之前");
-    },
-    destroyed() {
-        console.log("组件销毁之后");
+        console.log('组件更新之后');
     },
     beforeUnmount() {
-        console.log("组件卸载之前");
+        console.log('组件销毀之前');
     },
     unmounted() {
-        console.log("组件卸载之后");
+        console.log('组件销毀之后');
     },
-
 }
 </script>
 
 <style scoped>
-.shengmingzhouqi {
-    color: aqua;
+.shengmingzhouqi{
+    color:aqua;
 }
 </style>

@@ -1,28 +1,27 @@
 <template>
-    <div class="jisaunshuxing">
-        <hr>
-        <h3>计算属性</h3>
-        <p>{{ content.name }}</p>
-        <div>{{ content.text.length > 2 ? "yes" : "no" }}</div>
-        <div>{{ content.results.length > 0 ? (content.text1.length > 0 ? "yes" : "55555555") : "222222" }}</div>
-        <p>{{ isResults }}</p>
-        <p>{{ isDatat() }}</p>
-        <hr>
-    </div>
+<div class="jisuanshuxing">
+    <hr>
+    <h3>计算属性</h3>
+    <p>{{ content.name }}</p>
+    <div>{{ content.text.length > 2 ? "yes":"no"}}</div>
+    <div>{{ content.results.length > 0 ? (content.text1.length > 0 ? "yes":"55555") :"2222"}}</div>
+    <p>{{ isResults }}</p>
+    <p>{{isDatat()}}</p>
+
+</div>
 </template>
 
 <script>
-export default {
-    name: 'jisuanshuxing',
-
-    data() {
-        return {
-            content: {
-                name: 'abc',
-                text: ["1","2","3"],
-                text1: [],
-                arr: [{ name: "张三",id: 1},{ name: "李四",id: 2},{ name: "王五",id: 3}],
-                results: [
+    export default {
+        name: 'jisuanshuxing',
+         data() {
+            return {
+                content: {
+                    name: "adcccccccc",
+                    text: ["1","2","3"],
+                    text1: [],
+                    arr: [{name:"张三",id :1},{name:"王五",id :1},{name:"赵六",id :3},],
+                    results: [
                 {
                     "gkey": "102094960",
                     "qcmsint1": "0",
@@ -56,25 +55,26 @@ export default {
                     "name": "火柴人游戏合集",
                     "img": "//p1.qhimg.com/t0147f6ec029fefe8d7.png"
                 }
-                ],
-            }
-        };
-    },
-    computed: {
-        isResults() {
-            return this.content.results.length > 0 ? (this.content.text1.length > 0 ? "yes" : "89898989") : "222222";
+            ],
+        }
+    };
+},
+    computed:{
+        isResults(){
+            return this.content.results.length > 0 ?(this.content.text1.length > 0 ? "yes":"89898989"):"22222";
         }
     },
-    methods: {
-        isDatat() {
-            return this.content.results.length > 0 ? (this.content.text1.length > 0 ? "yes" : "77777777") : "222222";
+        methods:{
+        isDatat(){
+            return this.content.results,length > 0 ?(this.content.text1.length > 0 ? "yes": "777777777"): "22222";
+
         }
     }
-}
+};
 </script>
 
 <style scoped>
 .jisuanshuxing {
-    color: red;
+    color: red
 }
 </style>

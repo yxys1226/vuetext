@@ -2,23 +2,23 @@
     <div class="liebiaoxuanran">
         <hr>
         <h3>列表渲染</h3>
-        <div v-for="name in names">{{ name }}</div>
-        <div v-for="(name, index) in names">{{ name }} -------- {{ index }}</div>
+        <div v-for="name in name">{{ name }}</div>
+        <div v-for="(name, index) in names">{{ name}}------ {{ index}}</div>
         <div v-for="value in results">
             <p>{{ value.name }}</p>
-            <img :src="value.img" :alt="value.title">
+            <img :src="value.img" alt="value.title">
         </div>
-        <div v-for="(value,key,index) in myObject">{{ value }} --- {{ key }} --- {{ index }}</div>"
+        <div v-for="(value, key, index) in myObjects">{{ value }} --- {{ key }} --- {{ index }}</div>
         <hr>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            names: ['张三', '李四', '王五'],
-            results: [
+    export default {
+        data() {
+            return {
+                name: ['张三', '李四', '王五'],
+                results: [
                 {
                     "gkey": "102094960",
                     "qcmsint1": "0",
@@ -53,18 +53,19 @@ export default {
                     "img": "//p1.qhimg.com/t0147f6ec029fefe8d7.png"
                 }
             ],
-            myObject: {
+            myObjects: {
                 title: '游戏列表',
                 author: 'ADAD',
-                Date: '2021-09-01'
-            }   
-        }
-    },
-}
+                Date: '2021-07-01',
+            }
+            }
+        },
+    }
 </script>
 
 <style scoped>
-.liebiaoxuanran{
-    color: burlywood;   
+.liebiaoxuanran {
+    color: burlywood;
 }
+
 </style>

@@ -1,7 +1,8 @@
-<template>
+<template> 
     <div class="zichuanfu">
         <h3>child</h3>
-        <button @click="clickmsg1">click me</button>
+        <button @click="clickmsg">click me</button>
+
     </div>
 </template>
 
@@ -9,19 +10,23 @@
 export default {
     name: 'zichuanfu',
 
-    data() {
-        return {
-            msg: '这是子组件'
-        }
-    },  
+data() {
+    return {
+        msg: '这是子组件'
+        
+    }
+},
 
-    methods: {
-        clickmsg1() {
-            // console.log('clickmsg1');
-            this.$emit('someEvent', this.msg);
-        }
+methods: {
+    clickmsg(){
+        this.$emit('someEvent',this.msg)
+       
+    }
+    
     }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

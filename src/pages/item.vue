@@ -1,16 +1,15 @@
 <template> 
-
-    <h3>item</h3>
+<h3>item</h3>
 </template>
 
 <style scoped>
 h3 {
-    width: 80%;
+    width:80%;
     margin: 0 auto;
     text-align: center;
-    line-height: 100px;
+    line-height:100px;
     box-sizing: border-box;
-    margin-top: 25px;
-    background: #999;
+    margin-top:25px;
+    background:#999;
 }
 </style>

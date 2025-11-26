@@ -1,6 +1,9 @@
 <template>
-    <div class="home-container">
-        <h1>Vue3教学</h1>
+    <div class="home-container"> 
+        <h1>VUE3教学</h1>
+        <nav class="navigation"> 
+            <router-link to="/new" class="nav-link">新组建集合</router-link>
+        </nav>
         <hr>
         <Mobanyufa></Mobanyufa>
         <Shuxingbangding></Shuxingbangding>
@@ -13,24 +16,27 @@
         <Shuzubianhuazhence></Shuzubianhuazhence>
         <Jisuanshuxing></Jisuanshuxing>
         <Classbangding></Classbangding>
-        <Biaodanshujubangding></Biaodanshujubangding>
-        <Watchzhengting></Watchzhengting>
         <Stylebangding></Stylebangding>
-        <Zujianzucheng></Zujianzucheng>
+        <Watchzhengting></Watchzhengting>
+        <Mobanyinyong></Mobanyinyong>
+        <Biaodanshujubangding></Biaodanshujubangding>
         <Zujianqiantao></Zujianqiantao>
         <Zujianchuanzhiprops></Zujianchuanzhiprops>
         <PropsjiaoyanA></PropsjiaoyanA>
         <Zujianshijian></Zujianshijian>
         <ZujianshijianVmodel></ZujianshijianVmodel>
-        <Chacaoslots></Chacaoslots>
+        <Chachaoslots></Chachaoslots>
         <Shengmingzhouqi></Shengmingzhouqi>
         <Shengmingzhouqiyingyong></Shengmingzhouqiyingyong>
+        <Dongtaizujian></Dongtaizujian>
+        <Yibuzujian></Yibuzujian>
+        <Yilazhuruparent></Yilazhuruparent>
+        
     </div>
 </template>
 
-
-<script>
-import Mobanyufa from '../components/mobanyufa.vue'
+<script> 
+import Mobanyufa from '../components/mobanyufa.vue';
 import Shuxingbangding from '../components/shuxingbangding.vue';
 import Tiaojianxuanran from '../components/tiaojianxuanran.vue';
 import Liebiaoxuanran from '../components/liebiaoxuanran.vue';
@@ -41,20 +47,24 @@ import Shijianxiushifu from '../components/shijianxiushifu.vue';
 import Shuzubianhuazhence from '../components/shuzubianhuazhence.vue';
 import Jisuanshuxing from '../components/jisuanshuxing.vue';
 import Classbangding from '../components/classbangding.vue';
-import Biaodanshujubangding from '../components/biaodanshujubangding.vue';
-import Watchzhengting from '../components/watchzhengting.vue';
 import Stylebangding from '../components/stylebangding.vue';
-import Zujianzucheng from '../components/zujianzucheng.vue';
+import Watchzhengting from '../components/watchzhengting.vue';
+import Mobanyinyong from '../components/mobanyinyong.vue';
+import Biaodanshujubangding from '../components/biaodanshujubangding.vue';
 import Zujianqiantao from '../components/zujianqiantao.vue';
 import Zujianchuanzhiprops from '../components/zujianchuanzhiprops.vue';
 import PropsjiaoyanA from '../components/propsjiaoyanA.vue';
 import Zujianshijian from '../components/zujianshijian.vue';
 import ZujianshijianVmodel from '../components/zujianshijianVmodel.vue';
-import Chacaoslots from '../components/chacaoslots.vue';
+import Chachaoslots from '../components/chachaoslots.vue';
 import Shengmingzhouqi from '../components/shengmingzhouqi.vue';
 import Shengmingzhouqiyingyong from '../components/shengmingzhouqiyingyong.vue';
+import Dongtaizujian from '../components/dongtaizujian.vue';
+import Yibuzujian from '../components/yibuzujian.vue';
+import Yilazhuruparent from '../components/yilazhuruparent.vue';
 
-export default {
+
+export default { 
     name: 'home',
     components: {
         Mobanyufa,
@@ -68,31 +78,24 @@ export default {
         Shuzubianhuazhence,
         Jisuanshuxing,
         Classbangding,
-        Biaodanshujubangding,
-        Watchzhengting,
         Stylebangding,
-        Zujianzucheng,
+        Watchzhengting,
+        Mobanyinyong,
+        Biaodanshujubangding,
         Zujianqiantao,
         Zujianchuanzhiprops,
         PropsjiaoyanA,
         Zujianshijian,
         ZujianshijianVmodel,
-        Chacaoslots,
+        Chachaoslots,
         Shengmingzhouqi,
         Shengmingzhouqiyingyong,
-
+        Dongtaizujian,
+        Yibuzujian,     
+        Yilazhuruparent
     },
-    data() {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        }
-    },
-    methods: {
-        click() {
-            console.log('click')
-        }
-    },
-}
+                              
+    }
 </script>
 
 <style scoped>
@@ -101,9 +104,26 @@ export default {
     z-index: 10;
 }
 
-h1 {
+h1{
     z-index: 11;
     color: aqua;
 }
-
+.navigation {
+    margin: 20px 0;
+    z-index: 11;
+}
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:gba(255, 255, 255, 0.1);
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    transition:background-color 0.3s ease;
+}
+.nav-link:hover{
+    background-color:rgba(255,255,255,0.3);
+}
 </style>
+
+      

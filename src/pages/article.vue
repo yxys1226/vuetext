@@ -1,9 +1,13 @@
 <template> 
-    <h3>article</h3>
+<h3>article</h3>
 </template>
 
-<style scoped> 
-h3 {
+<script> 
+</script>
+
+
+<style scoped>
+h3{
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -11,5 +15,6 @@ h3 {
     box-sizing: border-box;
     margin-top: 50px;
     background: #999;
+
 }
 </style>
